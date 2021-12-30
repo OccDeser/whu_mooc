@@ -69,7 +69,7 @@ def main():
     time.sleep(10)
 
     driver.switch_to.frame("frame_content")
-    course = driver.find_element_by_xpath("//li[@cname='%s']" % LESSON)
+    course = driver.find_element_by_xpath(("//span[text()='%s']") % LESSON)
     course.click()
 
     time.sleep(1)
